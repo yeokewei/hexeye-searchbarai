@@ -14,6 +14,7 @@ def search(query):
     top_5_index =result_array.argsort()[-1][::-1][:5]
     top_5_index = top_5_index.tolist()
     print(top_5_index)
-    output={'top_5_index': top_5_index} 
+    output={'top_5_index': top_5_index,
+    'top_5_services': table.iloc[top_5_index]['Service'].tolist()} 
     return output
 
